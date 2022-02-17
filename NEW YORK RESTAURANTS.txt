@@ -1,0 +1,30 @@
+1. SELECT *
+FROM nomnom;
+
+2.SELECT DISTINCT neighborhood FROM nomnom;
+
+3.SELECT DISTINCT cuisine FROM nomnom;
+
+4.SELECT * from nomnom WHERE cuisine = 'Chinese';
+
+5.SELECT * from nomnom WHERE review >= 4 ORDER BY review DESC;
+
+6.SELECT * from nomnom WHERE price = '$$$' and cuisine = 'Italian' ORDER BY review DESC;
+
+7.SELECT name FROM nomnom WHERE name LIKE '%meatball%';
+
+8.SELECT * FROM nomnom WHERE neighborhood = 'Midtown' OR neighborhood = 'Downtown' OR neighborhood = 'Chinatown';
+
+9.SELECT * FROM nomnom WHERE health IS Null;
+
+10. SELECT * FROM nomnom ORDER BY review DESC LIMIT 10;
+
+11. SELECT * ,
+CASE
+  WHEN review > 4.5 THEN 'Extraordinary'
+  WHEN review > 4 THEN 'Excellent'
+  WHEN review > 3 THEN 'Good'
+  WHEN review > 2 THEN 'Fair'
+  ELSE 'Poor'
+  END  AS REMARK
+  FROM nomnom;
